@@ -3,63 +3,161 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
-    <title>Anup's Portfolio</title>
+    <title>Anup Timsina | Portfolio</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <nav>
-        <div class="nav-container">
-            <div class="logo" data-aos="zoom-in" data-aos-duration="1000">
-            </div>
-            <div class="links">
-            </div>
-            <i class="fa-solid fa-bars hamburg" onclick="hamburg()"></i>
+
+    <div class="vscode-container">
+        
+        <div class="activity-bar">
+            <div class="icon active"><i class="far fa-copy"></i></div> <div class="icon"><i class="fas fa-search"></i></div>
+            <div class="icon"><i class="fas fa-code-branch"></i></div>
+            <div class="icon"><i class="fas fa-bug"></i></div>
+            <div class="icon"><i class="fas fa-cubes"></i></div>
+            <div class="icon bottom"><i class="fas fa-cog"></i></div>
         </div>
-        <div class="dropdown">
-                <i class="fa-solid fa-xmark cancel" onclick="cancel()"></i>
-            </div>
-        </div>
-    </nav>
-        <section>
-            <div class="main-container">
-                <div class="image" data-aos="zoom-in-right" data-aos-duration="2500">
-                    <img src="main.png" alt="">
+
+        <div class="sidebar">
+            <div class="sidebar-header">EXPLORER</div>
+            <div class="explorer-section">
+                <div class="folder-header"><i class="fas fa-chevron-down"></i> PORTFOLIO-ANUP</div>
+                <div class="file active" onclick="openTab('home')">
+                    <i class="fab fa-html5 text-orange"></i> index.html
                 </div>
-                <div class="content">
-                    <h1 data-aos="fade-left" data-aos-duration="1000" data-aos-delay="800">Hey I'm <span>Anup</span></h1>
-                    <div class="typewriter" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="900">I'm  <span></span></div>
-                    <p data-aos="flip-up" data-aos-duration="1000" data-aos-delay="1000">I’m Anup Timsina, an IT graduate from Nepal with a strong focus on AI and ML. I graduated with a Bachelor's degree in IT, and I’m currently working on projects that involve AI, machine learning, and stock market analysis.  I’m passionate about making a difference in the tech world and striving for financial freedom.</p>
-                    <div class="social-links" data-aos="flip-down" data-aos-duration="1000" data-aos-delay="1200">
-                        <a href="https://github.com/timsinaanup" ><i class="fa-brands fa-github"></i></a>
-                        <a href="https://www.linkedin.com/in/timsinaanup/"><i class="fa-brands fa-linkedin"></i></a>
-                        <a href="https://x.com/codewithanup"><i class="fa-brands fa-x-twitter"></i></a>
-                    </div>
-                    <div class="btn" data-aos="zoom-out-left" data-aos-duration="1000" data-aos-delay="1300">
-                        <a href="Anup-Timsina-cv.pdf" download>
-                            <button>Download CV</button>
-                        </a>
+                <div class="file" onclick="openTab('about')">
+                    <i class="fab fa-python text-blue"></i> about_me.py
+                </div>
+                <div class="file" onclick="openTab('infivity')">
+                    <i class="fab fa-js text-yellow"></i> infivity_data.json
+                </div>
+                <div class="file" onclick="openTab('contact')">
+                    <i class="fab fa-css3-alt text-blue"></i> contact.css
+                </div>
+            </div>
+        </div>
+
+        <div class="editor-area">
+            
+            <div class="tabs-bar">
+                <div class="tab active" id="tab-home" onclick="openTab('home')">
+                    <i class="fab fa-html5 text-orange"></i> index.html <span class="close">×</span>
+                </div>
+                <div class="tab" id="tab-about" onclick="openTab('about')">
+                    <i class="fab fa-python text-blue"></i> about_me.py <span class="close">×</span>
+                </div>
+                <div class="tab" id="tab-infivity" onclick="openTab('infivity')">
+                    <i class="fab fa-js text-yellow"></i> infivity.json <span class="close">×</span>
+                </div>
+                <div class="tab" id="tab-contact" onclick="openTab('contact')">
+                    <i class="fab fa-css3-alt text-blue"></i> contact.css <span class="close">×</span>
+                </div>
+            </div>
+
+            <div class="breadcrumbs">
+                src > components > <span id="current-file">index.html</span>
+            </div>
+
+            <div class="code-content-container">
+                
+                <div class="line-numbers">
+                    1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17<br>18<br>19<br>20
+                </div>
+
+                <div id="home" class="content active-content">
+                    <div class="hero-section">
+                        <span class="tag">&lt;div class="intro"&gt;</span>
+                        <h1 class="gradient-text">Hi, I'm Anup Timsina</h1>
+                        <h2 class="subtitle">Data Analyst | Founder @ INFIVITY | Mentor</h2>
+                        <p class="comment">&lt;!-- 3+ years of experience mentoring young minds --&gt;</p>
                         
-                            
-                        </a>
+                        <div class="buttons">
+                            <button class="btn-primary" onclick="openTab('infivity')">View Startup</button>
+                            <button class="btn-secondary" onclick="openTab('contact')">Contact Me</button>
+                        </div>
+                        <span class="tag">&lt;/div&gt;</span>
                     </div>
                 </div>
+
+                <div id="about" class="content">
+                    <pre><code class="language-python">
+<span class="keyword">class</span> <span class="class-name">AnupTimsina</span>:
+    <span class="keyword">def</span> <span class="function">__init__</span>(<span class="self">self</span>):
+        <span class="self">self</span>.education = <span class="string">"Bachelor's in IT (Nepal)"</span>
+        <span class="self">self</span>.focus = [<span class="string">"AI"</span>, <span class="string">"Machine Learning"</span>, <span class="string">"Stock Market Analysis"</span>]
+        <span class="self">self</span>.roles = [<span class="string">"Programmer"</span>, <span class="string">"Mentor"</span>, <span class="string">"Hackathon Trainer"</span>]
+
+    <span class="keyword">def</span> <span class="function">educating_young_minds</span>(<span class="self">self</span>):
+        <span class="return">return</span> {
+            <span class="string">"action"</span>: <span class="string">"Providing online sessions on Coding & AI"</span>,
+            <span class="string">"goal"</span>: <span class="string">"Preparing students for Hackathons"</span>
+        }
+
+<span class="comment"># Anup is currently working on projects involving AI & ML.</span>
+<span class="variable">current_status</span> = <span class="string">"Building the future of Nepal through EdTech"</span>
+                    </code></pre>
+                </div>
+
+                <div id="infivity" class="content">
+                    <pre><code class="language-json">
+{
+  <span class="key">"company"</span>: <span class="string">"INFIVITY"</span>,
+  <span class="key">"tagline"</span>: <span class="string">"Creativity-Driven EdTech Startup"</span>,
+  <span class="key">"mission"</span>: <span class="string">"To make every child a creator, not just a consumer of technology."</span>,
+  <span class="key">"vision"</span>: <span class="string">"Building a generation of thinkers and innovators in Nepal."</span>,
+  <span class="key">"programs"</span>: [
+    { <span class="key">"name"</span>: <span class="string">"Coding & AI"</span>, <span class="key">"tools"</span>: [<span class="string">"Scratch"</span>, <span class="string">"Python"</span>, <span class="string">"Web"</span>] },
+    { <span class="key">"name"</span>: <span class="string">"Robotics & IoT"</span>, <span class="key">"focus"</span>: <span class="string">"Hardware + Software"</span> },
+    { <span class="key">"name"</span>: <span class="string">"Arts & Design"</span>, <span class="key">"focus"</span>: <span class="string">"Creative Thinking"</span> }
+  ],
+  <span class="key">"services"</span>: {
+    <span class="key">"Analytics"</span>: <span class="string">"Transform business data into actionable insights"</span>,
+    <span class="key">"Dev"</span>: <span class="string">"Web and App Development"</span>,
+    <span class="key">"AI"</span>: <span class="string">"Chatbot Integration"</span>
+  },
+  <span class="key">"location"</span>: <span class="string">"Damak, Jhapa, Nepal"</span>
+}
+                    </code></pre>
+                </div>
+
+                <div id="contact" class="content">
+                    <pre><code class="language-css">
+<span class="selector">.contact-info</span> {
+    <span class="property">name</span>: <span class="string">"Anup Timsina"</span>;
+    <span class="property">email</span>: <span class="string">"contact@infivity.com"</span>; <span class="comment">/* Update with real email */</span>
+    <span class="property">linkedin</span>: <span class="string">"linkedin.com/in/anup-timsina"</span>;
+    <span class="property">location</span>: <span class="string">"Nepal"</span>;
+}
+
+<span class="selector">.message-me</span> {
+    <span class="property">display</span>: <span class="value">block</span>;
+    <span class="property">cursor</span>: <span class="value">pointer</span>;
+    <span class="property">color</span>: <span class="value">#gradient-match</span>;
+}
+
+<span class="comment">/* "From Data to Design, INFIVITY builds what tomorrow needs." */</span>
+                    </code></pre>
+                </div>
+
             </div>
-        </section>
-        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-        <script>
-          AOS.init({offset:0});
-        </script>
-        <script>
-            function hamburg(){
-                const navbar = document.querySelector(".dropdown")
-                navbar.style.transform = "translateY(0px)"
-            }
-            function cancel(){
-                const navbar = document.querySelector(".dropdown")
-                navbar.style.transform = "translateY(-500px)"
-            }
-        </script>
+        </div>
+    </div>
+
+    <div class="status-bar">
+        <div class="left">
+            <span><i class="fas fa-code-branch"></i> main*</span>
+            <span><i class="far fa-times-circle"></i> 0</span>
+            <span><i class="fas fa-exclamation-triangle"></i> 0</span>
+        </div>
+        <div class="right">
+            <span>Ln 12, Col 45</span>
+            <span>UTF-8</span>
+            <span>Prettier</span>
+            <span class="bell"><i class="far fa-bell"></i></span>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
