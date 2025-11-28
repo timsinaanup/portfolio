@@ -26,6 +26,9 @@
                 <div class="file active" onclick="openTab('home')">
                     <i class="fab fa-html5 text-orange"></i> index.html
                 </div>
+                <div class="file" onclick="openTab('profile')">
+                    <i class="fas fa-image text-purple"></i> profile.jpg
+                </div>
                 <div class="file" onclick="openTab('about')">
                     <i class="fab fa-python text-blue"></i> about_me.py
                 </div>
@@ -44,6 +47,9 @@
                 <div class="tab active" id="tab-home" onclick="openTab('home')">
                     <i class="fab fa-html5 text-orange"></i> index.html <span class="close">×</span>
                 </div>
+                <div class="tab" id="tab-profile" onclick="openTab('profile')">
+                    <i class="fas fa-image text-purple"></i> profile.jpg <span class="close">×</span>
+                </div>
                 <div class="tab" id="tab-about" onclick="openTab('about')">
                     <i class="fab fa-python text-blue"></i> about_me.py <span class="close">×</span>
                 </div>
@@ -61,7 +67,7 @@
 
             <div class="code-content-container">
                 
-                <div class="line-numbers">
+                <div class="line-numbers" id="line-numbers-bar">
                     1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17<br>18<br>19<br>20
                 </div>
 
@@ -69,15 +75,34 @@
                     <div class="hero-section">
                         <span class="tag">&lt;div class="intro"&gt;</span>
                         <h1 class="gradient-text">Hi, I'm Anup Timsina</h1>
-                        <h2 class="subtitle">Data Analyst | Founder @ INFIVITY | Mentor</h2>
+                        <h2 class="subtitle">Data Analyst | Founder @ INFIVITY | Mentor | Entrepreneur</h2>
                         <p class="comment">&lt;!-- 3+ years of experience mentoring young minds --&gt;</p>
                         
                         <div class="buttons">
-                            <button class="btn-primary" onclick="openTab('infivity')">View Startup</button>
-                            <button class="btn-secondary" onclick="openTab('contact')">Contact Me</button>
-                        </div>
+                            <button class="btn-primary" onclick="openTab('profile')">View Profile Pic</button>
+                            <button class="btn-secondary" onclick="window.location.href='www.infivity.com.np'">View Startup</button>                        </div>
                         <span class="tag">&lt;/div&gt;</span>
                     </div>
+                </div>
+
+                <div id="profile" class="content profile-layout">
+    <div class="profile-left-pane">
+        <div class="image-wrapper">
+            <img src="profile.jpg" alt="Anup Timsina Profile" class="profile-img">
+            <div class="image-info">Anup Timsina | Entrepreneur</div>
+        </div>
+    </div>
+    
+                <div class="profile-right-pane">
+                    <pre><code class="language-comment">
+                    <span class="comment"># Personal Summary:</span>
+                    <span class="comment"># File: profile.jpg</span>
+                    <span class="comment"># ------------------------------------</span>
+                    <span class="comment"># Role: Programmer, Mentor & Hackathon Trainer</span>
+                    <span class="comment"># Domain: AI, ML, Stock Market Analysis</span>
+                    <span class="comment"># Motto: Learning Beyond Textbooks</span>
+                            </code></pre>
+                        </div>
                 </div>
 
                 <div id="about" class="content">
@@ -94,7 +119,7 @@
             <span class="string">"goal"</span>: <span class="string">"Preparing students for Hackathons"</span>
         }
 
-<span class="comment"># Anup is currently working on projects involving AI & ML.</span>
+<span class="comment"># Anup is currently working on changing how kids are being educated</span>
 <span class="variable">current_status</span> = <span class="string">"Building the future of Nepal through EdTech"</span>
                     </code></pre>
                 </div>
@@ -125,8 +150,8 @@
                     <pre><code class="language-css">
 <span class="selector">.contact-info</span> {
     <span class="property">name</span>: <span class="string">"Anup Timsina"</span>;
-    <span class="property">email</span>: <span class="string">"contact@infivity.com"</span>; <span class="comment">/* Update with real email */</span>
-    <span class="property">linkedin</span>: <span class="string">"linkedin.com/in/anup-timsina"</span>;
+    <span class="property">email</span>: <span class="string">"info@infivity.com.np"</span>; <span class="comment"></span>
+    <span class="property">linkedin</span>: <span class="string">"https://www.linkedin.com/in/timsinaanup/"</span>;
     <span class="property">location</span>: <span class="string">"Nepal"</span>;
 }
 

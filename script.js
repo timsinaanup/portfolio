@@ -23,22 +23,35 @@ function openTab(tabName) {
     // 5. Highlight the top tab
     document.getElementById("tab-" + tabName).classList.add("active");
 
-    // 6. Highlight the sidebar file (using simple index mapping for this demo)
-    // Note: In a real app, you'd select by ID, but order matches here.
+    // 6. Highlight the sidebar file (Mapping by index)
     if(tabName === 'home') files[0].classList.add("active");
-    if(tabName === 'about') files[1].classList.add("active");
-    if(tabName === 'infivity') files[2].classList.add("active");
-    if(tabName === 'contact') files[3].classList.add("active");
+    if(tabName === 'profile') files[1].classList.add("active"); // New profile index
+    if(tabName === 'about') files[2].classList.add("active");
+    if(tabName === 'infivity') files[3].classList.add("active");
+    if(tabName === 'contact') files[4].classList.add("active");
 
-    // 7. Update Breadcrumbs
+    // 7. Update Breadcrumbs & Line Numbers
     var fileExtension = "html";
+    let lineNumbers = document.getElementById("line-numbers-bar");
+    
+    // Default: show line numbers
+    lineNumbers.classList.remove("hide-numbers");
+
     if(tabName === 'about') fileExtension = "py";
     if(tabName === 'infivity') fileExtension = "json";
     if(tabName === 'contact') fileExtension = "css";
     
+    if(tabName === 'profile') {
+        fileExtension = "jpg";
+        // Hide line numbers for image view
+        lineNumbers.classList.add("hide-numbers");
+    }
+    
     // Formatting the name slightly for the breadcrumb
-    let displayName = tabName === 'infivity' ? 'infivity_data' : tabName === 'about' ? 'about_me' : tabName;
-    if(displayName === 'home') displayName = 'index';
+    let displayName = tabName;
+    if(tabName === 'infivity') displayName = 'infivity_data';
+    if(tabName === 'about') displayName = 'about_me';
+    if(tabName === 'home') displayName = 'index';
 
     document.getElementById("current-file").innerText = `${displayName}.${fileExtension}`;
 }
